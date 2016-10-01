@@ -46,4 +46,10 @@ function! Verilog()
 	endif
 endfunction
 
+" o creates a new line at the same indent
+set autoindent 
 " The ! allows the function to override other functions
+
+" remap j k to scroll for autocomplete
+inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
