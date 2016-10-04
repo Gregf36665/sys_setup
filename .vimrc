@@ -41,6 +41,10 @@ function! Verilog()
 		return 'a1' " add one from the fold level
 	elseif getline(v:lnum) =~ '^\s*endtask'
 		return 's1' " subtract one from the fold level
+	elseif getline(v:lnum) =~ '^\s*case'
+		return 'a1' " add one from the fold level
+	elseif getline(v:lnum) =~ '^\s*endcase'
+		return 's1' " subtract one from the fold level
 	else
 		return '='
 	endif
