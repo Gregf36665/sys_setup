@@ -57,3 +57,6 @@ set autoindent
 " remap j k to scroll for autocomplete
 inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
 inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+
+" Set the color scheme
+colo koehler 
