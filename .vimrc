@@ -31,7 +31,8 @@ function! Set_Verilog()
 	set fdc=1
 endfunction
 
-" Fold on begin/end groups this doesn't allow for nested commands
+" Fold on begin/end groups this does allow for nested commands
+" Note it looks for whitespace before the keyword.  This is my style
 function! Verilog()
 	if getline(v:lnum) =~ '^\s*begin'
 		return 'a1' " add one to the fold level
