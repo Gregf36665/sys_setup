@@ -64,3 +64,6 @@ inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 " Set the color scheme
 colo koehler 
+
+" Automatically set the pwd to the file location
+set autochdir
