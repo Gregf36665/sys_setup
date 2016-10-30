@@ -75,3 +75,11 @@ augroup BgHighlight
 	autocmd WinEnter * set cul " Highlight the current line when entering the window
 	autocmd WinLeave * set nocul " Stop highlighting the line
 augroup END
+
+" Configure the cursor to blink at the correct rate
+highlight Cursor guifg=steelblue guibg=white
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor "In Normal Visual and Command mode use the block cursor
+set guicursor+=i:ver100-iCursor " In insert mode set the cursor to a vertical height of 100%
+set guicursor+=n-v-c:blinkon0 " Disable blinking in N-V-C modes
+set guicursor+=i:blinkwait10 " allow blinking to happen in insert mode 
