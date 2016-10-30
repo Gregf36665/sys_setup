@@ -68,3 +68,10 @@ colo koehler
 
 " Automatically set the pwd to the file location
 set autochdir
+
+" Highlight the active vim buffer/window
+augroup BgHighlight
+	autocmd!
+	autocmd WinEnter * set cul " Highlight the current line when entering the window
+	autocmd WinLeave * set nocul " Stop highlighting the line
+augroup END
