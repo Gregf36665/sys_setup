@@ -31,7 +31,8 @@ function! Set_Verilog()
 	set fdc=1
 endfunction
 
-" Fold on begin/end groups this doesn't allow for nested commands
+" Fold on begin/end groups this does allow for nested commands
+" Note it looks for whitespace before the keyword.  This is my style
 function! Verilog()
 	if getline(v:lnum) =~ '^\s*begin'
 		return 'a1' " add one to the fold level
@@ -64,3 +65,21 @@ inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
 
 " Set the color scheme
 colo koehler 
+
+" Automatically set the pwd to the file location
+set autochdir
+
+" Highlight the active vim buffer/window
+augroup BgHighlight
+	autocmd!
+	autocmd WinEnter * set cul " Highlight the current line when entering the window
+	autocmd WinLeave * set nocul " Stop highlighting the line
+augroup END
+
+" Configure the cursor to blink at the correct rate
+highlight Cursor guifg=steelblue guibg=white
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor "In Normal Visual and Command mode use the block cursor
+set guicursor+=i:ver100-iCursor " In insert mode set the cursor to a vertical height of 100%
+set guicursor+=n-v-c:blinkon0 " Disable blinking in N-V-C modes
+set guicursor+=i:blinkwait10 " allow blinking to happen in insert mode 
