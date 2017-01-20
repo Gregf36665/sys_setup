@@ -23,6 +23,12 @@ highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
 "Match any verilog files to the correct syntax
 " au stands for auto command
 au BufNewFile,BufRead *.sv,*.v,*.vh,*.args,*.f,*.verilog call Set_Verilog()
+au BufNewFile,BufRead *.vhd call Set_VHDL()
+au BufNewFile,BufRead *.py call Set_Python()
+
+function! Set_Python()
+	set fdm=indent
+endfunction
 
 function! Set_Verilog()
 	set ft=verilog
@@ -30,6 +36,24 @@ function! Set_Verilog()
 	set foldexpr=Verilog()
 	set fdc=1
 endfunction
+
+function! Set_VHDL()
+	set ft=vhdl
+	set fdm=expr
+	set foldexpr=VHDL()
+	set fdc=1
+endfunction
+
+function! VHDL()
+	if getline(v:lnum) =~ '^\s*begin'
+		return 'a1'
+	elseif getline(v:lnum) =~ '^\s*end'
+		return 's1'
+	else
+		return '='
+	endif
+endfunction
+
 
 " Fold on begin/end groups this does allow for nested commands
 " Note it looks for whitespace before the keyword.  This is my style
