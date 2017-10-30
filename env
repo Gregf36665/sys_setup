@@ -279,10 +279,11 @@ funckey r rotate
 funckey m "pick -cursor; move"
 funckey x "pick -cursor; delete"
 alias f find
-alias ss find
 alias find "FORM find find_name" 
 funckey zc "zoom center; pick -cursor"
-
+funckey Del delete
+funckey s slide
+funckey Esc Done
 
 #--------------------------------------------------------------------
 # OTHER ALIASES	
