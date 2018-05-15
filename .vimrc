@@ -107,3 +107,6 @@ set guicursor=n-v-c:block-Cursor "In Normal Visual and Command mode use the bloc
 set guicursor+=i:ver100-iCursor " In insert mode set the cursor to a vertical height of 100%
 set guicursor+=n-v-c:blinkon0 " Disable blinking in N-V-C modes
 set guicursor+=i:blinkwait10 " allow blinking to happen in insert mode 
+
+" make Y behave as it should
+nmap Y y$
