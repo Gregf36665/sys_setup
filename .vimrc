@@ -122,4 +122,4 @@ map <C-j>  j<C-e>
 map <C-k>  k<C-y>
 
 " Toggle softtabs if required
-noremap <F4> :noexpandtab!<CR>
+noremap <F4> :set noexpandtab!<CR>
