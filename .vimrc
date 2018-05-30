@@ -108,5 +108,18 @@ set guicursor+=i:ver100-iCursor " In insert mode set the cursor to a vertical he
 set guicursor+=n-v-c:blinkon0 " Disable blinking in N-V-C modes
 set guicursor+=i:blinkwait10 " allow blinking to happen in insert mode 
 
+" Mouse settings
+set mouse=a " Don't get line numbers when highlighting
+
 " make Y behave as it should
 nmap Y y$
+
+" Show tab and EoL chars on F5
+noremap <F5> :set list!<CR
+
+" Have a key to scroll while moving lines
+map <C-j>  j<C-e>
+map <C-k>  k<C-y>
+
+" Toggle softtabs if required
+noremap <F4> :noexpandtab!<CR>
