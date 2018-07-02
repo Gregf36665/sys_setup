@@ -123,3 +123,6 @@ map <C-k>  k<C-y>
 
 " Toggle softtabs if required
 noremap <F4> :set noexpandtab!<CR>
+
+" Make markdown highlight correctly
+au BufferNewFile,BufFilepre,BufRead *.md set filetype=markdown
