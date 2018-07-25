@@ -125,4 +125,4 @@ map <C-k>  k<C-y>
 noremap <F4> :set noexpandtab!<CR>
 
 " Make markdown highlight correctly
-au BufferNewFile,BufFilepre,BufRead *.md set filetype=markdown
+au BufNewFile,BufFilepre,BufRead *.md set filetype=markdown
