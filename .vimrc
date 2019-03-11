@@ -28,6 +28,7 @@ au BufNewFile,BufRead *.py call Set_Python()
 
 function! Set_Python()
 	set fdm=indent
+	set expandtab " Let python use spaces
 endfunction
 
 function! Set_Verilog()
