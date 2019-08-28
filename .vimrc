@@ -11,7 +11,7 @@ set wrapscan
 nmap j gj
 nmap k gk
 
-set fdc=1 "set the fold colum to 1
+set fdc=1 "set the fold column to 1
 set fmr={,} "Set the fold markers
 set fdm=marker
 
@@ -117,7 +117,7 @@ set mouse=a " Don't get line numbers when highlighting
 nmap Y y$
 
 " Show tab and EoL chars on F5
-noremap <F5> :set list!<CR
+noremap <F5> :set list!<CR>
 
 " Have a key to scroll while moving lines
 map <C-j>  j<C-e>
