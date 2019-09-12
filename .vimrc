@@ -14,6 +14,7 @@ nmap k gk
 set fdc=1 "set the fold column to 1
 set fmr={,} "Set the fold markers
 set fdm=marker
+set foldlevelstart=99 " Have the folds open by default
 
 highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
 highlight Folded      gui=italic  guifg=Black      guibg=Grey90
