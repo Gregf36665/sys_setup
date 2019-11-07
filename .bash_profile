@@ -27,4 +27,5 @@ fi
 
 unset env
 
-cd ~
+# Create better display of git tags
+alias gtag='git for-each-ref --format="%(refname:short) %(taggerdate) %(subject) %(body)" refs/tags | sort -V'
