@@ -130,5 +130,5 @@ noremap <F4> :set noexpandtab!<CR>
 " Make markdown highlight correctly
 au BufNewFile,BufFilepre,BufRead *.md set filetype=markdown
 
-" Make F5 run python files
-map <F5> :!python %<CR>
+" Make F5 run python files after saving
+map <F5> :w <bar> :!python %<CR>
